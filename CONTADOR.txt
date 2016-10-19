@@ -1,0 +1,32 @@
+#!/bin/bash
+
+#SCRIPT FEITO POR RODRIGO CARDOSO
+#ELE CONTA AS PALAVRAS DE UM TEXTO E ORDENA DE A A Z
+
+
+#SOLICITA O NOME DO ARQUIVO
+
+echo "digite o nome do arquivo" 
+
+
+#IMPRIME NA TELA 
+
+read arq 
+
+ 
+#ESSE COMANDO PEGA A PALAVRA QUE FOI ESCRITA E MANDA PARA A VARIAVEL "ARQ"
+
+cat $arq | egrep -o '\w+' | grep .... | sort -f | uniq -c -i | sort -n -r | head 
+
+
+#ABAIXO COMANDOS ESPECIFICOS
+
+#O comando [egrep -o '\w+'] serve para trazer so as palavras, 	                                        #E o comando [grep ....] serve para limitar o tamando da palavra 
+#E o comando [sort -f] serve para ignorar as maisculas e minusculas nas palavras
+#E o comando [uniq -c -i] serve para criar a contagem e ignorar as maisculas e minusculas nas palavras
+#E o comando [sort -n -r] serve para ordenar do maior para o menor 
+#E o comando [head] serve para mostrar os 10 primeiros
+
+
+#AULA DE DESENV EM REDES DE COMPUTADORES
+

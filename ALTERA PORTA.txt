@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#CRIADO POR RODRIGO CARDOSO
+
+#INSTALA O SSH
+apt-get install openssh-server
+
+echo
+echo "TECLE ENTER PARA CONTINUAR"
+read pause
+clear 
+
+#EDITA O ARQUIVO DE CONFIG DO SSH
+nano /etc/ssh/sshd_config
+
+#INICIA O SSH
+/etc/init.d/ssh start
+
+echo
+echo "TECLE ENTER PARA CONTINUAR"
+read pause
+clear 
+
+#COMANDO PARA TESTAR A MAQUINA E ALTERAR A PORTA
+ssh aluno@10.10.66.252 -p 10000
+
+
+#AULA DE DESENV EM REDES DE COMPUTADORES
